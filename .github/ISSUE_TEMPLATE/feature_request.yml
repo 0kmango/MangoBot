@@ -1,0 +1,57 @@
+name: Propuesta de mejora
+description: Ideas para comandos, rendimiento o experiencia de uso
+title: "[Mejora] "
+labels: ["enhancement", "triaje"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por la idea. Cuanto más concreto sea el caso de uso, más fácil
+        es valorarla.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve?
+      description: Describe la situación actual y qué te resulta incómodo
+      placeholder: "Cuando hay 30 canciones en la cola, `!q` envía un mensaje larguísimo y no se puede leer."
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: Cómo te gustaría que funcionara
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas que has considerado
+      description: Opcional
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Música (cola, reproducción, Spotify/YouTube)
+        - Mango AI (texto)
+        - Mango AI (voz)
+        - Comandos y permisos
+        - Instalación y multiplataforma
+        - Documentación
+        - Otro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: comprobaciones
+    attributes:
+      label: Comprobaciones
+      options:
+        - label: Busqué una propuesta parecida antes de abrir esta
+          required: true
+        - label: La idea es compatible con la personalidad de Mango (tono, seguridad, sin menciones masivas)

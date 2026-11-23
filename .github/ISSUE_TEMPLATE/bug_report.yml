@@ -1,0 +1,86 @@
+name: Informe de error
+description: Algo no funciona como debería
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por tomarte el tiempo de reportar!
+
+        Antes de enviar:
+        - revisa que no exista ya un issue parecido;
+        - **quita el token y las claves de API** de cualquier log que pegues.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versión de Mango Bot
+      description: Aparece en el `README.md` o en `pyproject.toml`
+      placeholder: "1.7.9"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema operativo
+      options:
+        - Linux
+        - Windows 10/11
+        - macOS
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Versión de Python
+      description: Salida de `python --version`
+      placeholder: "3.12.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Ejecuto `./run.sh`
+        2. Escribo `!play <canción>`
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas que pasara
+    validations:
+      required: true
+
+  - type: textarea
+    id: real
+    attributes:
+      label: Qué pasó realmente
+      description: Si hubo un error, pega el texto completo de la excepción
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs relevantes (sin secretos)
+      render: shell
+
+  - type: checkboxes
+    id: comprobaciones
+    attributes:
+      label: Comprobaciones
+      options:
+        - label: Ejecuté `python tests/check_secrets.py` y el repositorio está limpio
+        - label: He quitado el token y las claves de los logs que pegué
+          required: true
+        - label: Busqué un issue parecido antes de abrir este
+          required: true
