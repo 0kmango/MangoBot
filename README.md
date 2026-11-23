@@ -1,5 +1,9 @@
 # 🥭 Mango Bot
 
+[![Calidad](https://github.com/0kmango/MangoBot/actions/workflows/calidad.yml/badge.svg)](https://github.com/0kmango/MangoBot/actions/workflows/calidad.yml)
+[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue)](https://www.python.org/)
+
+
 Bot de Discord con **música, personalidad propia y Mango AI** (asistente en
 texto y por voz). Funciona en **Linux**, **Windows** y **macOS**.
 
