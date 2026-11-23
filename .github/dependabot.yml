@@ -1,0 +1,37 @@
+version: 2
+
+# Mango Bot fija versiones exactas en requirements.txt (discord.py, yt-dlp,
+# davey, faster-whisper...) y también tiene un requirements-voices.txt
+# opcional. Dependabot vigila los tres y agrupa los avisos para no inundar.
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    groups:
+      dependencias-bot:
+        patterns: ["*"]
+    commit-message:
+      prefix: "deps"
+    labels:
+      - "dependencias"
+    # discord.py y davey están fijados a versiones concretas a propósito
+    # (ver los comentarios de requirements.txt): se revisan a mano.
+    ignore:
+      - dependency-name: "discord.py"
+      - dependency-name: "davey"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      acciones:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencias"
