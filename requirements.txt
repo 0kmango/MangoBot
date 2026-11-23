@@ -23,17 +23,17 @@ davey==0.1.7
 
 # --- Música ---
 yt-dlp==2026.10.26
-spotipy==2.25.1
-lyricsgenius==3.15.0
+spotipy==2.26.0
+lyricsgenius==3.18.1
 
 # --- Configuración y utilidades ---
-python-dotenv==1.1.1
+python-dotenv==1.2.4
 
 # ============================================================
 #  Mango AI (texto y voz)
 # ============================================================
 # Cliente para cualquier API compatible con OpenAI (OpenAI, Groq, Ollama…)
-openai>=1.60,<4
+openai>=3.57.0,<4
 # Recepción de audio en canales de voz (sink de discord.py 2.x)
 discord-ext-voice-recv==0.5.2a179
 # STT local sin API (Whisper en CPU)
@@ -41,6 +41,6 @@ faster-whisper==1.2.1
 # TTS neuronal gratuito (voces es-ES / es-MX)
 edge-tts==7.3.1
 # Mezcla de música + voz y conversión PCM
-numpy>=2.0
+numpy>=2.4.6
 # HTTP asíncrono (lo usa el cliente de voz y las llamadas a APIs)
-aiohttp>=3.10
+aiohttp>=3.14.5
